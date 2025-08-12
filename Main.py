@@ -27,3 +27,19 @@ manager.view_products()
 
 total = manager.total_value()
 print(f"\nTotal inventory value after removal: ${total:.2f}")
+
+
+from cart import Cart
+
+# ... existing code ...
+
+cart = Cart()
+
+# Add three products from ProductManager to cart (choose first 3 for example)
+for product in manager.products[:3]:
+    cart.add_product(product)
+
+print("\nCart Summary:")
+cart.display_cart()
+total_charge = cart.calculate_total()
+print(f"Total amount to be charged: ${total_charge:.2f}")

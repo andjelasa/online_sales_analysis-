@@ -18,3 +18,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Remove a product
+manager.remove_product("Smartphone")
+
+print("\nProducts after removal:")
+manager.view_products()
+
+total = manager.total_value()
+print(f"\nTotal inventory value after removal: ${total:.2f}")
